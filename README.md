@@ -1,6 +1,4 @@
-# Platinum
-
-## A simple Go API extension for Datetime  - Platinum
+# Platinum - A simple Go API extension for Datetime  - Platinum
 
 ## Introduction
 
