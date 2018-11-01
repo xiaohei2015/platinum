@@ -19,4 +19,7 @@ fmt.Println("Now:", platinum.Now())
 
 fmt.Println("Right now:", platinum.Now().ToDateTimeString())
 // prints: Right now:2018-11-01 04:04:08
+
+fmt.Println("Date:", platinum.CreateFromDate(2018, 10, 31))
+// prints: Date:2018-10-31 00:00:00
 ```

@@ -9,4 +9,5 @@ import (
 func main() {
 	fmt.Println("Now:", platinum.Now())
 	fmt.Println("Right now:", platinum.Now().ToDateTimeString())
+	fmt.Println("Date:", platinum.CreateFromDate(2018, 10, 31))
 }
