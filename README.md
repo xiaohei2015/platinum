@@ -17,6 +17,6 @@ go get -u github.com/xiaohei2015/Platinum
 fmt.Println("Now:%s", Platinum.Now())
 // prints: Now:2018-11-01 03:58:31
 
-fmt.Println("Right now:%s", Platinum.Now().toDateTimeString())
+fmt.Println("Right now:%s", Platinum.Now().oDateTimeString())
 // prints: Right now:2018-11-01 04:04:08
 ```
