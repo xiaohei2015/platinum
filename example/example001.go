@@ -27,4 +27,54 @@ func main() {
 	// prints: Location Change: 2018-11-02 03:07:19
 	fmt.Println("Format Change:", platinum.CreateFromDate(2018, 10, 31).Format("2006/01/02"))
 	// prints: Format Change: 2018/10/31
+
+	fmt.Println("IsWeekend:", platinum.CreateFromDate(2018, 10, 29).IsWeekend())
+	// prints: IsWeekend: false
+	fmt.Println("IsWeekday:", platinum.CreateFromDate(2018, 10, 29).IsWeekday())
+	// prints: IsWeekday: true
+	fmt.Println("IsYesterday:", platinum.CreateFromDate(2018, 11, 1).IsYesterday())
+	// prints: IsYesterday: true
+	fmt.Println("IsToday:", platinum.CreateFromDate(2018, 11, 1).IsToday())
+	// prints: IsToday: false
+	fmt.Println("IsTomorrow:", platinum.CreateFromDate(2018, 11, 1).IsTomorrow())
+	// prints: IsTomorrow: false
+	fmt.Println("IsFuture:", platinum.CreateFromDate(2018, 11, 2).IsFuture())
+	// prints: IsFuture: false
+	fmt.Println("IsPast:", platinum.CreateFromDate(2018, 11, 2).IsPast())
+	// prints: IsPast: true
+	fmt.Println("IsLeapYear:", platinum.CreateFromDate(2004, 11, 2).IsLeapYear())
+	// prints: IsLeapYear: true
+
+	fmt.Println("AddYears:", platinum.CreateFromDate(2018, 11, 2).AddYears(3))
+	// prints: AddYears: 2021-11-02 00:00:00
+	fmt.Println("SubYears:", platinum.CreateFromDate(2018, 11, 2).SubYears(3))
+	// prints: SubYears: 2015-11-02 00:00:00
+	fmt.Println("AddMonths:", platinum.CreateFromDate(2018, 11, 2).AddMonths(3))
+	// prints: AddMonths: 2019-02-02 00:00:00
+	fmt.Println("SubMonths:", platinum.CreateFromDate(2018, 11, 2).SubMonths(3))
+	// prints: SubMonths: 2018-08-02 00:00:00
+	fmt.Println("AddDays:", platinum.CreateFromDate(2018, 11, 2).AddDays(3))
+	// prints: AddDays: 2018-11-05 00:00:00
+	fmt.Println("SubDays:", platinum.CreateFromDate(2018, 11, 2).SubDays(3))
+	// prints: SubDays: 2018-10-30 00:00:00
+	fmt.Println("AddWeekdays:", platinum.CreateFromDate(2018, 11, 1).AddWeekdays(-9))
+	// prints: AddWeekdays: 2018-10-19 00:00:00
+	fmt.Println("SubWeekdays:", platinum.CreateFromDate(2018, 11, 1).SubWeekdays(-9))
+	// prints: SubWeekdays: 2018-11-14 00:00:00
+	fmt.Println("AddWeeks:", platinum.CreateFromDate(2018, 11, 1).AddWeeks(1))
+	// prints: AddWeeks: 2018-11-08 00:00:00
+	fmt.Println("SubWeeks:", platinum.CreateFromDate(2018, 11, 1).SubWeeks(1))
+	// prints: SubWeeks: 2018-10-25 00:00:00
+	fmt.Println("AddHours:", platinum.CreateFromDate(2018, 11, 1).AddHours(1))
+	// prints: AddHours: 2018-11-01 01:00:00
+	fmt.Println("SubHours:", platinum.CreateFromDate(2018, 11, 1).SubHours(1))
+	// prints: SubHours: 2018-10-31 23:00:00
+	fmt.Println("AddMinutes:", platinum.CreateFromDate(2018, 11, 1).AddMinutes(1))
+	// prints: AddMinutes: 2018-11-01 00:01:00
+	fmt.Println("SubMinutes:", platinum.CreateFromDate(2018, 11, 1).SubMinutes(1))
+	// prints: SubMinutes: 2018-10-31 23:59:00
+	fmt.Println("AddSeconds:", platinum.CreateFromDate(2018, 11, 1).AddSeconds(1))
+	// prints: AddSeconds: 2018-11-01 00:00:01
+	fmt.Println("SubSeconds:", platinum.CreateFromDate(2018, 11, 1).SubSeconds(1))
+	// prints: SubSeconds: 2018-10-31 23:59:59
 }
