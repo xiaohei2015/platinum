@@ -23,21 +23,49 @@ func Create(tm time.Time, format string) *Time {
 	}
 }
 
-func Now() *Time {
-	return Create(time.Now(), "")
-}
-
 func CreateFromDate(year int, month time.Month, day int) *Time {
 	return Create(time.Date(year, month, day, 0, 0, 0, 0, time.Local), "")
 }
 
-func CreateFromDateWithLocation(year int, month time.Month, day int, loc *time.Location) *Time {
-	return Create(time.Date(year, month, day, 0, 0, 0, 0, loc), "")
+func CreateFromDateTime(year int, month time.Month, day int, hour int, minute int, second int) *Time {
+	return Create(time.Date(year, month, day, hour, minute, second, 0, time.Local), "")
 }
 
+func Now() *Time {
+	return Create(time.Now(), "")
+}
+
+func Today() *Time {
+	t := time.Now()
+	year, month, day := t.Date()
+	return CreateFromDate(year, month, day)
+}
+
+func Tomorrow() *Time {
+	t := time.Now().AddDate(0, 0, 1)
+	year, month, day := t.Date()
+	return CreateFromDate(year, month, day)
+}
+
+func Yesterday() *Time {
+	t := time.Now().AddDate(0, 0, -1)
+	year, month, day := t.Date()
+	return CreateFromDate(year, month, day)
+}
+
+/**
+ * Update time format
+ */
 func (t *Time) Format(format string) *Time {
 	t.format = format
 	return t
+}
+
+/**
+ * Update time locaiton
+ */
+func (t *Time) Location(loc *time.Location) *Time {
+	return Create(t.time.In(loc), "")
 }
 
 func (t *Time) ToDateTimeString() string {
