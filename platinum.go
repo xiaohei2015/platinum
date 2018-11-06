@@ -471,7 +471,7 @@ func (t *Time) DiffInWeeks(targetTime *Time, absolute ...bool) int64 {
 
 func (t *Time) DiffInMonths(targetTime *Time, absolute ...bool) int {
 	diffTime := DateTimeDiff(t, targetTime)
-	return 12*diffTime.year + diffTime.month
+	return MonthsPerYear*diffTime.year + diffTime.month
 }
 
 func (t *Time) DiffInYears(targetTime *Time, absolute ...bool) int {

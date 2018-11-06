@@ -1,8 +1,8 @@
-# platinum - A simple Go API extension for Datetime
+# platinum - A simple Go library for Datetime
 
 ## Introduction
 
-A very very simple Datetime API writen by golang
+A very very simple Datetime library writen by golang
 
 ## Install
 
