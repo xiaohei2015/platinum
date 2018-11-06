@@ -77,4 +77,21 @@ func main() {
 	// prints: AddSeconds: 2018-11-01 00:00:01
 	fmt.Println("SubSeconds:", platinum.CreateFromDate(2018, 11, 1).SubSeconds(1))
 	// prints: SubSeconds: 2018-10-31 23:59:59
+
+	fmt.Println("DateTimeDiff:", platinum.DateTimeDiff(platinum.CreateFromDate(1984, 1, 28), platinum.CreateFromDate(1989, 1, 27)))
+	// prints: DateTimeDiff: {4 11 30 0 0 0}
+	fmt.Println("DiffInSeconds:", platinum.CreateFromDate(2018, 11, 3).DiffInSeconds(platinum.CreateFromDate(2018, 11, 2), false))
+	// prints: DiffInSeconds: -86400
+	fmt.Println("DiffInMinutes:", platinum.CreateFromDate(2018, 11, 3).DiffInMinutes(platinum.CreateFromDate(2018, 11, 2), false))
+	// prints: DiffInMinutes: -1440
+	fmt.Println("DiffInHours:", platinum.CreateFromDate(2018, 11, 3).DiffInHours(platinum.CreateFromDate(2018, 11, 2), false))
+	// prints: DiffInHours: -24
+	fmt.Println("DiffInDays:", platinum.CreateFromDate(2018, 11, 3).DiffInDays(platinum.CreateFromDate(2018, 11, 2), false))
+	// prints: DiffInDays: -1
+	fmt.Println("DiffInWeeks:", platinum.CreateFromDate(2018, 11, 3).DiffInWeeks(platinum.CreateFromDate(2018, 11, 2), false))
+	// prints: DiffInWeeks: 0
+	fmt.Println("DiffInMonths:", platinum.CreateFromDate(2017, 11, 3).DiffInMonths(platinum.CreateFromDate(2018, 11, 2), false))
+	// prints: DiffInMonths: 11
+	fmt.Println("DiffInYears:", platinum.CreateFromDate(2017, 11, 1).DiffInYears(platinum.CreateFromDate(2018, 11, 2), false))
+	// prints: DiffInYears: 1
 }
